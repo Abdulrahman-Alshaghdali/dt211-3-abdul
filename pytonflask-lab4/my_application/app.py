@@ -19,12 +19,6 @@ if __name__ == "__main__":
 
 @app.route("/listfile")
 def files():
-        path = "./uploads"
-        dircs = os.listdir(path)
-
-
-@app.route("/listfile")
-def files():
 	path = "./uploads"
 	dircs = os.listdir(path)
 
