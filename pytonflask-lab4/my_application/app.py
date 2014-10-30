@@ -16,22 +16,18 @@ def upload_file():
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
 
-<<<<<<< HEAD
 
 @app.route("/listfile") def files():
         path = "./uploads"
         dircs = os.listdir(path)
-=======
+
+
 @app.route("/listfile")
 def files():
 	path = "./uploads"
 	dircs = os.listdir(path)
->>>>>>> 21137a8addbc6b44dc549facbd96a04e5d4f4fe6
+
 
 	for each_file in dircs:
 		files = str(files + each_file + " ")
 	return files
-<<<<<<< HEAD
-=======
-
->>>>>>> 21137a8addbc6b44dc549facbd96a04e5d4f4fe6
