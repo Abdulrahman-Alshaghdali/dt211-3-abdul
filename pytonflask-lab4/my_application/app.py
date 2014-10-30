@@ -1,3 +1,4 @@
+import os, sys
 from flask import Flask
 from flask import request
 app = Flask(__name__)
@@ -14,3 +15,12 @@ def upload_file():
     return '',201
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)
+
+
+@app.route("/listfile") def files():
+        path = "./uploads"
+        dircs = os.listdir(path)
+
+	for each_file in dircs:
+		files = str(files + each_file + " ")
+	return files
